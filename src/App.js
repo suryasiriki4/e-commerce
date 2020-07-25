@@ -1,29 +1,20 @@
-import React from 'react';
-import Card from './components/card';
-import Cart from './components/cart';
-
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import Home from './components/Home';
+import ItemsInCart from './components/ItemsInCart';
+import React, {Component}  from 'react';
+import Error from './components/Error';
 
 function App() {
-    return (
-        <div>
-            <Cart />
-            <div className="container">
-                <div className="row">
-                    <Card className="col-4" num="1"/>
-                    <Card className="col-4" num="2"/>
-                    <Card className="col-4" num="3"/>
-                    <Card className="col-4" num="4"/>
-                    <div className="width-100" ></div>
-                    <Card className="col-4" num="5"/>
-                    <Card className="col-4" num="6"/>
-                    <Card className="col-4" num="7"/>
-                    <Card className="col-4" num="8"/>
-                </div>
-            </div>
-        </div>
-        
-        
+    return(
+        <main>
+        <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/cart" component={ItemsInCart}  />
+            <Route component={Error} />
+        </Switch>
+    </main>
     );
+    
 }
 
 export default App;

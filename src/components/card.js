@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Card, Button} from 'react-bootstrap';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import {AddToCart} from './cart';
 
 const images = [1,2,3,4,5,6,7,8];
 
 function PhoneCard(props) {
+
     return (
         <div>
-
             
         <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src={"images/" + props.num + ".jpg"} />
@@ -18,7 +19,7 @@ function PhoneCard(props) {
                     the card's content.
                     </Card.Text>
                     
-                    <Button variant="warning"><AddShoppingCartIcon/></Button>
+                    <Button variant="warning" onClick={() => AddToCart(props.num)}> <AddShoppingCartIcon/> </Button>
                     <Button variant="primary">Buy</Button>
                 </Card.Body>
         </Card>

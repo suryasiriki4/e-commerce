@@ -1,15 +1,27 @@
 img {
     width: 210px !important;
     height: 356px;
-    
+    margin-left: 15%;
+    margin-top: 5%;
 } 
 
 Button {
-    margin-top: 6%;
+    margin-right: 6%;
 }
+
+
 
 body {
     text-align: center;
+}
+
+.cart-icon {
+    font-size: 3rem !important;
+}
+
+.cart-div {
+    text-align: right;
+    padding: 5%;
 }
 
 .flex-container {
@@ -21,10 +33,11 @@ body {
     padding: 0 10%;
 }
 
-.card {
-    margin: 15%;
-    padding: 15%;
+
+.col {
+    margin: 5px;
     padding-bottom: 5%;
+    flex: 1 0 21%;
 }
 
 .row {
