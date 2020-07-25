@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Card from './components/card';
+import Cart from './components/cart';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div>
+            <Cart />
+            <div className="container">
+                <div className="row">
+                    <Card className="col-4" num="1"/>
+                    <Card className="col-4" num="2"/>
+                    <Card className="col-4" num="3"/>
+                    <Card className="col-4" num="4"/>
+                    <div className="width-100" ></div>
+                    <Card className="col-4" num="5"/>
+                    <Card className="col-4" num="6"/>
+                    <Card className="col-4" num="7"/>
+                    <Card className="col-4" num="8"/>
+                </div>
+            </div>
+        </div>
+        
+        
+    );
 }
 
 export default App;
